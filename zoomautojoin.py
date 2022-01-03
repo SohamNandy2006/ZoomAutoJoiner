@@ -10,13 +10,10 @@ def parseFile():
     indexcounter = 0
     for line in meetingLines:
         a= line.split(" ")
-        length = len(a)
-        timeIndex.append("totally optimized code")
-        linkIndex.append("python omegacringe... ")
+        timeIndex.append("placeholder")
+        linkIndex.append("placeholder")
         timeIndex[indexcounter] = a[0]
         linkIndex[indexcounter] = a[1]
-        # timeIndex.append(first_half[0])
-        # meetingLines.append(second_half[0])
         indexcounter+= 1
       
 def main():
@@ -25,7 +22,6 @@ def main():
         if sys.argv[1] == "-verbose" or sys.argv[1] == "--v":
             print("Verbose argument found")
             verboseFlag = True  
-
     except:
         print("No launch args")
         verboseFlag = False
@@ -36,8 +32,6 @@ def main():
                 print("currenttime = {} and comparing to {}".format(currenttime,time))
             if currenttime == time:
                 index = timeIndex.index(time)
-                # webbrowser.get("C:/Program Files/Google/Chrome/Application/chrome.exe %s").open(linkIndex[index],new=0) 
-                # webbrowser.open(linkIndex[index],new=0) subsitute this if u dont have chrome
                 # using zoombie logic to open zoom without browser thanks to https://github.com/DaBigBlob/zoombie
                 link = linkIndex[index]
                 domain = link.split('/')[3]
