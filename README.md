@@ -2,6 +2,7 @@
 A simple program I wrote that autojoins zoom links without having to open the browser.
 ## Usage
 Either run the script with `python3 zoomautojoiner.py` or `python zoomautojoiner.py` or run the EXE file.
+Run with `-verbose` argument to show extra information. I use this to see whether the parsing worked correctly.
 ## Format of `meetings.txt`
 `<time in 24hour format> <zoom meeting link>`
 ## Requirments
