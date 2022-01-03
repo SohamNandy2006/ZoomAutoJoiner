@@ -1,5 +1,4 @@
-import webbrowser
-from time import gmtime, sleep, strftime
+from time import sleep, strftime
 import os,sys
 timeIndex = []
 linkIndex = []
