@@ -26,7 +26,7 @@ def parseFile():
     source.close()
 
 def main():
-    
+    verboseFlag = True
     Print("Rest easy... this will open zoom when the time comes UwU")
     try:
         if sys.argv[1] == "-verbose" or sys.argv[1] == "--v":
@@ -34,7 +34,6 @@ def main():
             verboseFlag = True  
     except:
         logging.warning("No launch argument detected")
-        verboseFlag = False
     while True:
         try:
             currenttime = strftime("%H:%M")
