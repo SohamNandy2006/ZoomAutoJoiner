@@ -1,3 +1,6 @@
 build/
 dist/
 zoomautojoin.spec
+log.txt
+log_BackGround.txt
+stdout
