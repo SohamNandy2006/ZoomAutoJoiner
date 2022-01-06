@@ -4,3 +4,4 @@ zoomautojoin.spec
 log.txt
 log_BackGround.txt
 stdout
+__pycache__/
