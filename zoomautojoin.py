@@ -1,5 +1,6 @@
 import logging
 from sys import platform
+from tabnanny import verbose
 
 Windows = False
 if platform == "win32" or platform == "cygwin":
@@ -47,7 +48,7 @@ def parseFile():
             descIndex[indexcounter] = "No description provided"
         indexcounter+= 1
     source.close()
-
+verboseFlag = False
 def main():
     print("Rest easy... this will open zoom when the time comes UwU")
     try:
