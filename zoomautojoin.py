@@ -13,13 +13,6 @@ def Print(toPrint):
 from time import sleep, strftime
 import os,sys
 
-if Windows:
-    try:
-        import subprocess
-    except:
-        Print("Subprocess module cannot be imported. Did you install the dependancy ??")
-        quit(0)
-
 timeIndex = []
 linkIndex = []
 descIndex = []
@@ -70,8 +63,10 @@ def main():
                 domain = link.split('/')[3]
                 mID = link.split('/')[-1].split('?')[0]
                 pswd = link.split('/')[-1].split('=')[1]
-
-                os.system(f'start zoommtg://{domain}/join?action=join"&"confno={mID}"&"pwd={pswd} /HIGH >NUL  2>NUL')    
+                if (Windows==False):
+                    os.system(f'xdg-open zoommtg://{domain}/join?action=join"&"confno={mID}"&"pwd={pswd} > log.txt')
+                else:
+                    os.system(f'start zoommtg://{domain}/join?action=join"&"confno={mID}"&"pwd={pswd} /HIGH >NUL  2>NUL')    
                 Print(f"JOINING MEETING: {linkIndex[index]} - DESC: {descIndex[index]}")
                 Print("Sleeping for 60 seconds to avoid accidental meeting join")
                 sleep(60)
