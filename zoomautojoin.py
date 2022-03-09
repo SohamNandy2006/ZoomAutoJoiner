@@ -1,7 +1,5 @@
 import logging
 from sys import platform
-from tabnanny import verbose
-
 Windows = False
 if platform == "win32" or platform == "cygwin":
     Windows = True
@@ -37,15 +35,15 @@ def parseFile():
             else:
                 descIndex[indexcounter] = a[2]
         else:
-            print(len(a))
             descIndex[indexcounter] = "No description provided"
         indexcounter+= 1
     source.close()
+
 verboseFlag = False
 def main():
     print("Rest easy... this will open zoom when the time comes UwU")
     try:
-        if sys.argv[1] == "-verbose" or sys.argv[1] == "--v":
+        if sys.argv[1] == "--verbose" or sys.argv[1] == "-v":
             print("Verbose argument found")
             verboseFlag = True  
     except:
