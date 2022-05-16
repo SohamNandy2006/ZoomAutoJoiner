@@ -62,7 +62,7 @@ def main():
                 mID = link.split('/')[-1].split('?')[0]
                 pswd = link.split('/')[-1].split('=')[1]
                 if (Windows==False):
-                    os.system(f'xdg-open zoommtg://{domain}/join?action=join"&"confno={mID}"&"pwd={pswd} > log.txt')
+                    os.system(f'xdg-open zoommtg://{domain}/join?action=join"&"confno={mID}"&"pwd={pswd} > log.txt &')
                 else:
                     os.system(f'start zoommtg://{domain}/join?action=join"&"confno={mID}"&"pwd={pswd} /HIGH >NUL  2>NUL')    
                 Print(f"JOINING MEETING: {linkIndex[index]} - DESC: {descIndex[index]}")
